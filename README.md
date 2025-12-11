@@ -123,12 +123,11 @@ For questions or feedback:
 
 GitHub Issues: open an issue in the repository.
 
-Email: your‑university email address (e.g. sd24ady@herts.ac.uk).
+Email: your‑university email address (e.g. sd24xxx@herts.ac.uk).
 
 Assignment Details:
 
 Module: Machine Learning / Neural Networks (or equivalent)
-
 
 Weighting: 40% (example)
 
