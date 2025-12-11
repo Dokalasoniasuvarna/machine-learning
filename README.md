@@ -1,101 +1,137 @@
 L1 and L2 Regularization in Logistic Regression
-MSc Machine Learning Tutorial (Individual Assignment)
+
+
+MSc Machine Learning Tutorial
 Author: Sonia Suvarana Dokala
 Student ID: 24085938
 Programme: MSc Data Science
 University: University of Hertfordshire
 
-📚 Project Overview
-This project provides a comprehensive tutorial on L1 and L2 regularization in logistic regression, focusing on how these techniques control model complexity and improve generalization performance. The report integrates theory, geometric intuition, and empirical results to show how different penalties influence decision boundaries, weight distributions, and classification accuracy.
 
-The work is submitted as part of a university machine learning module and demonstrates understanding of overfitting, the bias–variance trade‑off, and practical regularization strategies in linear models.
+📚 Overview
 
-🧠 Theoretical Background
-Regularization is introduced as a method to reduce overfitting by adding a penalty term to the loss function so that the model balances data fit with simplicity. The regularized logistic regression objective is expressed as a sum of the data loss and a penalty scaled by a hyperparameter λ, which controls regularization strength.
+This tutorial investigates how L1 and L2 regularization improve the generalization of logistic regression models by controlling model complexity and reducing overfitting. Through clear explanations, formulas, and practical examples, it shows how each penalty affects weights, decision boundaries, and classification performance.
 
-L2 (Ridge) Regularization
-Adds a quadratic penalty proportional to the sum of squared weights.
+What You’ll Learn
 
-Shrinks all coefficients smoothly toward zero but rarely sets them exactly to zero, resulting in dense models.
+How logistic regression works and how overfitting arises in high‑capacity models.
 
-Geometrically, constrains the solution within an ℓ 
-2
-  ball, which encourages stable solutions and distributes weight across correlated features.
+The mathematical formulation of L1 (Lasso) and L2 (Ridge) penalties.
 
-L1 (Lasso) Regularization
-Adds a penalty proportional to the sum of absolute weight values.
-
-Drives many coefficients exactly to zero, performing automatic feature selection and producing sparse, interpretable models.
-
-Geometrically, constrains the solution within an ℓ 
+Geometric interpretation of ℓ 
 1
-  ball, which favours axis-aligned solutions and promotes sparsity.
+  vs. ℓ 
+2
+  constraints in weight space.
 
-Elastic Net
-The report also discusses Elastic Net as a combination of L1 and L2 penalties that trades off between sparsity and stability. This is useful when features are correlated but interpretability through feature selection is still important.
+When to choose L1, L2, or Elastic Net in real applications.
 
-🧪 Practical Implementation
-The report uses logistic regression as the base model to empirically study the impact of different regularization schemes. Typical experiments include:
+Practical steps for scaling features and tuning regularization strength using cross‑validation.
 
-Comparing models with no regularization, pure L1, pure L2, and Elastic Net.
+🚀 Quick Start
 
-Examining how weight magnitudes and sparsity patterns change as λ increases.
-
-Visualizing decision boundaries to see how regularization smooths and stabilizes classification regions.
-
-Key implementation and tuning points:
-
-Feature scaling: Standardizing features is emphasised as essential so that regularization penalizes coefficients fairly across all dimensions.
-
-Hyperparameter tuning: Grid search with cross‑validation over a range of λ values (or C=1/λ in scikit‑learn) is recommended to find an appropriate regularization strength.
-
-Model interpretation: Coefficients are interpreted in terms of sign (direction of effect) and magnitude (strength of effect), with L1 additionally used for feature selection.
-
-🗂 Suggested Repository Structure
-A clean, university‑ready repository layout might be:
-
-text
-
-
-logistic-regularization-tutorial/
-│
-├── L1-and-L2-Regularization-in-Logistic-Regression.pdf
-├── notebooks/
-│   └── logistic_l1_l2_elasticnet.ipynb
-├── requirements.txt
-├── README.md
-└── LICENSE
-
-
-🚀 How to Run (for markers)
-Set up environment
+Installation
 
 bash
+# Clone the repository
 git clone https://github.com/<your-username>/logistic-regularization-tutorial.git
 cd logistic-regularization-tutorial
+
+# Install dependencies
 pip install -r requirements.txt
-Open the notebook
 
-Launch Jupyter Notebook or JupyterLab.
+# Launch Jupyter Notebook
+jupyter notebook notebooks/logistic_l1_l2_elasticnet.ipynb
+Running the Tutorial
 
-Open notebooks/logistic_l1_l2_elasticnet.ipynb.
+Open logistic_l1_l2_elasticnet.ipynb in Jupyter Notebook.
 
-Reproduce experiments
+Run all cells sequentially (Cell → Run All).
 
-Run all cells to train logistic regression models with L1, L2, and Elastic Net penalties.
+Plots, coefficient tables, and performance metrics for different penalties and λ values will be generated automatically.
 
-Inspect decision boundary plots, coefficient paths, and performance metrics across different values of λ.
+📁 Repository Structure
 
-🎯 Learning Outcomes (Academic)
-This work demonstrates that the student can:
+text
+logistic-regularization-tutorial/
+│
+├── notebooks/
+│   └── logistic_l1_l2_elasticnet.ipynb   # Main Jupyter notebook
+├── L1-and-L2-Regularization-in-Logistic-Regression.pdf   # Written tutorial report
+├── requirements.txt                      # Python dependencies
+├── README.md                             # This file
+├── LICENSE                               # MIT License (example)
+└── .gitignore                            # Standard Python gitignore
+🎯 Key Findings
 
-Explain and motivate the use of L1 and L2 regularization in logistic regression.
+The analysis in this tutorial highlights that:
 
-Relate regularization strength to the bias–variance trade‑off and overfitting behaviour.
+L2 regularization (Ridge)
 
-Implement regularized logistic regression models, perform appropriate feature scaling, and tune hyperparameters using cross‑validation.
+Produces smooth, proportional shrinkage of weights, keeping all features in the model with reduced magnitudes.
 
-Interpret regularized coefficients in terms of feature importance and model robustness, and justify when to prefer L1, L2, or Elastic Net in practice.
+Offers strong stability, especially when features are correlated, and is suitable when all features may carry information.
 
-📜 Academic Integrity and Copyright
-This README provides a concise, original summary of the attached report for university submission and does not reproduce copyrighted text. The full theoretical derivations, figures, and detailed experimental analysis are contained in “L1 and L2 Regularization in Logistic Regression: A Comprehensive Guide” authored by Sonia Suvarana Dokala
+L1 regularization (Lasso)
+
+Drives many coefficients exactly to zero, performing automatic feature selection and yielding sparse, interpretable models.
+
+Is effective when model simplicity and feature selection are priorities, or when many features are potentially irrelevant.
+
+Elastic Net
+
+Combines L1 and L2 to balance sparsity and stability, making it useful when features are correlated but interpretability still matters.
+
+Hyperparameter Tuning
+
+Proper scaling and cross‑validated tuning of λ are essential; too little regularization leads to overfitting, while too much causes underfitting and loss of predictive power.
+
+🎨 Accessibility Features
+
+This tutorial is designed with clarity and accessibility in mind:
+
+Consistent headings and logical section structure for easy navigation.
+
+Clear mathematical notation and step‑by‑step explanations of key formulas.
+
+Descriptive captions for plots illustrating decision boundaries and weight behaviour.
+
+Well‑commented code cells in the notebook, separating data preparation, model training, and evaluation.
+
+📚 References
+
+Standard machine learning texts and tutorials on logistic regression and regularization (L1, L2, and Elastic Net).
+
+Scikit‑learn documentation for LogisticRegression and regularization parameters.
+
+(Full academic references are provided in the accompanying PDF report.)
+
+👤 Author
+
+Name: Sonia Suvarana Dokala
+Student ID: 24085938
+Programme: MSc Data Science
+University: University of Hertfordshire
+
+📜 License
+
+This project is (for example) licensed under the MIT License – see the LICENSE file in the repository for full details.
+
+💬 Contact and Assignment Details
+
+For questions or feedback:
+
+GitHub Issues: open an issue in the repository.
+
+Email: your‑university email address (e.g. sd24ady@herts.ac.uk).
+
+Assignment Details:
+
+Module: Machine Learning / Neural Networks (or equivalent)
+
+
+Weighting: 40% (example)
+
+Submission Deadline: 11 December 2025
+
+This README is structured for university submission and provides a clear entry point to the full report “L1 and L2 Regularization in Logistic Regression: A Comprehensive Guide”.
