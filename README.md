@@ -56,12 +56,13 @@ text
 logistic-regularization-tutorial/
 │
 ├── notebooks/
-│   └── logistic_l1_l2_elasticnet.ipynb   # Main Jupyter notebook
-├── L1-and-L2-Regularization-in-Logistic-Regression.pdf   # Written tutorial report
-├── requirements.txt                      # Python dependencies
-├── README.md                             # This file
-├── LICENSE                               # MIT License (example)
-└── .gitignore                            # Standard Python gitignore
+│   └── logistic_l1_l2_elasticnet.ipynb    # Main Jupyter notebook
+├── L1-and-L2-Regularization-in-Logistic-Regression.pdf   # Full written report
+├── requirements.txt                        # Python dependencies
+├── README.md                               # This file
+├── LICENSE                                 # Project license
+└── .gitignore                              # Standard Python gitignore
+
 🎯 Key Findings
 
 The analysis in this tutorial highlights that:
