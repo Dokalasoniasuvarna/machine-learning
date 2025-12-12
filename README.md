@@ -1,11 +1,10 @@
 # L1 and L2 Regularization in Logistic Regression
 
 **MSc Machine Learning Tutorial (Individual Assignment)**
-**Author:** Sonia Suvarana Dokala
+**Author:** Sonia Suvarna Dokala
 **Student ID:** 24085938
 **Programme:** MSc Data Science
 **University:** University of Hertfordshire
-**Submission Date:** 11 December 2025
 
 ***
 
@@ -107,8 +106,9 @@ The project emphasises using separate training, validation, and test data, and t
 
 ## 👤 Author
 
-**Name:** Sonia Suvarana Dokala
+**Name:** Sonia Suvarna Dokala
 **Student ID:** 24085938
+**Github : ** https://github.com/Dokalasoniasuvarna
 **Programme:** MSc Data Science, University of Hertfordshire
 
 ***
